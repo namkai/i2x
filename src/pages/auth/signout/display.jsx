@@ -1,9 +1,10 @@
 import React from 'react';
+import SignoutLayout from './layout';
 
-const Signout = (props) => {
-  return (
-    <div>We're sorry to see you go...</div>
-  );
-};
+const Signout = props => (
+  <SignoutLayout>
+    <p>We're sorry to see you go...</p>
+  </SignoutLayout>
+);
 
 export default Signout;
