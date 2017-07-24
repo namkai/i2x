@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { compose, lifecycle } from 'recompose';
-import { fetchRecordingList } from '../../actions';
+import { fetchRecordingList } from '../../actions/thunks';
 import Feature from './display';
 import './style.css';
 import getFeaturePageState from './selector';

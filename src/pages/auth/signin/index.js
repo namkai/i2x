@@ -5,7 +5,7 @@ import { reduxForm } from 'redux-form';
 
 import Signin from './display';
 
-import { signin } from '../../../actions';
+import { signin } from '../../../actions/thunks';
 import getSigninState from './selector';
 
 const mapStateToProps = (state, ownProps) => getSigninState(state);

@@ -12,8 +12,8 @@ export default function (state = initialState, action) {
       return { ...state, pending: true };
     case type.FETCH_RECORDINGS_COMPLETED:
       return { ...state, list: action.payload, pending: false };
-    case type.FETCH_RECORDINGS_FAILED:
-      return { error: action.payload, pending: false };
+		case type.FETCH_RECORDINGS_FAILED:
+      return { ...state, error: action.payload, pending: false };
     default:
       return state;
   }
