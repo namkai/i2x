@@ -2,5 +2,5 @@ export default {
   SIGNIN: '/signin',
   SIGNOUT: '/signout',
   SIGNUP: '/signup',
-  FEATURE: '/',
+  FEATURE: '/feature',
 };

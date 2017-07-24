@@ -29,6 +29,7 @@ const App = () => (
       <div>
          <Navbar/>
         <Switch>
+          <Redirect from="/" exact to={routes.FEATURE} />
           <Route path={routes.SIGNIN} component={Signin} />
            <Route exact path={routes.SIGNOUT} component={Signout} />
           <Route exact path={routes.FEATURE} component={requireAuth(Feature)} />
