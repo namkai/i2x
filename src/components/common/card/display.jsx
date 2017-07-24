@@ -12,7 +12,7 @@ const Card = ({ url, rating, language, final_script, duration, created }) => (
       </audio>
       <div className="card-meta">
         <div>{Math.floor(duration / 60)} minutes</div>
-        <div>{created.split('T')[1].split('.')[0]}</div>
+        <div>created: {created.split('T')[1].split('.')[0]}</div>
       </div>
     </div>
   </div>
