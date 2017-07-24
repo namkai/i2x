@@ -1,0 +1,14 @@
+.card {
+	width: 800px;
+	display: flex;
+	margin: 10px auto;
+}
+
+.card-meta {
+	display: flex;
+	justify-content: space-between;
+}
+
+input {
+	display: none
+}
