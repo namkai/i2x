@@ -1,0 +1,10 @@
+.signin-container {
+	width: 500px;
+}
+
+.container-content-middle {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin-top: 5%;
+}
