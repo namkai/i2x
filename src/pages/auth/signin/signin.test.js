@@ -1,13 +1,13 @@
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import React from 'react';
-import Card from './display';
+import Signin from './display';
 
 
 it('renders correctly', () => {
-	const card = shallow(
-		<Card />,
-	);
-	expect(toJson(card)).toMatchSnapshot();
+  const signin = shallow(
+    <Signin />,
+  );
+  expect(toJson(signin)).toMatchSnapshot();
 });
 

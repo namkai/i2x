@@ -23,8 +23,5 @@ export const fetchRecordingList = () => (dispatch) => {
       headers: { authorization: `JWT ${localStorage.getItem('token')}` },
     })
     .then(response => dispatch({ type: type.FETCH_RECORDINGS_COMPLETED, payload: response.data.results }))
-    .catch((error) => {
-      console.log(error, 'i\'m the error!');
-      dispatch({ type: type.FETCH_RECORDINGS_FAILED, payload: error.data });
-    });
+    .catch((error) => dispatch({ type: type.FETCH_RECORDINGS_FAILED, payload: error.data }));
 };
