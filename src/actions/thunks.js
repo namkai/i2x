@@ -1,9 +1,10 @@
 import axios from 'axios';
 import * as type from '../constants/actionTypes';
+import * as api from '../constants/api';
 import { history } from '../pages';
 
 export const signin = ({ email, password }) => dispatch =>
-  axios.post('https://i2x-challenge.herokuapp.com/core/login/', { email, password })
+  axios.post(`${api.ROOT_URL}/login/`, { email, password })
     .then((response) => {
       // If request is good...
       // - Update state to indicate user is authenticated
@@ -18,12 +19,12 @@ export const signin = ({ email, password }) => dispatch =>
 export const fetchRecordingList = () => (dispatch) => {
   dispatch({ type: type.FETCH_RECORDINGS_STARTED });
   return axios
-    .get('https://i2x-challenge.herokuapp.com/ai/recording/list/', {
+    .get(api.RECORDING_LIST, {
       headers: { authorization: `JWT ${localStorage.getItem('token')}` },
     })
     .then(response => dispatch({ type: type.FETCH_RECORDINGS_COMPLETED, payload: response.data.results }))
-    .catch(error => {
-    	console.log(error, `i'm the error!`)
-    	dispatch({ type: type.FETCH_RECORDINGS_FAILED, payload: error.data })
+    .catch((error) => {
+      console.log(error, 'i\'m the error!');
+      dispatch({ type: type.FETCH_RECORDINGS_FAILED, payload: error.data });
     });
 };
