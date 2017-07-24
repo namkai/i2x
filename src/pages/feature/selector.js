@@ -1,8 +1,7 @@
-export default function (state) {
-  console.log(`i' the state!`, state)
+export default function ({ recording }) {
   return {
-    list: state.recording.list,
-    pending: state.recording.pending,
-    error: state.recording.error,
+    list: recording.list,
+    pending: recording.pending,
+    error: recording.error,
   };
 }
