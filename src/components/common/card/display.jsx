@@ -1,12 +1,19 @@
 import React from 'react';
-import StarRating from 'react-star-rating';
+import Rating from 'react-rating';
 import './style.css';
 
 const Card = ({ url, rating, language, final_script, duration, created }) => (
   <div className="card">
     <div className="card-block">
+      <Rating
+        empty={<i className="fa fa-star-o" aria-hidden="true" />}
+        full={<i style={{color: 'gold'}} className="fa fa-star" aria-hidden="true" />}
+        start={0}
+        stop={5}
+        initialRate={rating}
+        readonly
+      />
       <p className="card-text">{final_script}</p>
-      <StarRating name={url} size={18} totalStars={5} rating={rating} editing={false} />
       <audio controls>
         <source src={url} />
       </audio>
